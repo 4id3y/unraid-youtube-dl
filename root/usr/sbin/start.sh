@@ -17,7 +17,8 @@ while true; do
 	-f bestvideo+bestaudio \
 	--no-check-certificate \
 	--postprocessor-args "-strict experimental" \
-	--download-archive /persistent/archive
+	--download-archive /persistent/archive \
+	--merge-output-format mkv
 	chmod -R 777 /persistent/
 
 	#Create NFOs
