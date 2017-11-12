@@ -18,3 +18,5 @@ Link to Docker Hub: https://hub.docker.com/r/4id3y/youtube-dl/
   * Playlist URL: The URL of your Youtube playlist
 
   * Interval: How long you with the downloader to wait before checking your list again.
+  
+  * NFO: This is optional. It creates an NFO file to acompany the video. This is mainly for KODI
