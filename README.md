@@ -1,6 +1,8 @@
 # unraid-youtube-dl
 youtube-dl docker for Unraid. Primarily for music videos.
 
+Link to Docker Hub: https://hub.docker.com/r/4id3y/youtube-dl/
+
 Just paste https://github.com/4id3y/unraid-templates into the docker/templates section on unraid
 
 Click add container and select unraid-youtube-dl from the 4id3y subsection
