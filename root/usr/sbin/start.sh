@@ -18,7 +18,7 @@ while true; do
 	--no-check-certificate \
 	--postprocessor-args "-strict experimental" \
 	--download-archive /persistent/archive \
-	--merge-output-format mkv
+	--merge-output-format $OUTPUT_FORMAT
 	chmod -R 777 /persistent/
 
 	#Create NFOs
