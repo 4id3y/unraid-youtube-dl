@@ -8,13 +8,19 @@ while true; do
  	else
         	echo "PLAYLIST is set to '$PLAYLIST'"
 	fi
+	if [ -z ${FORMAT_SELECTION+x} ]; then
+		echo "FORMAT_SELECTION not set"
+		echo "Setting to bestvideo+bestaudio"
+		FORMAT_SELECTION="bestvideo+bestaudio"
+	fi
 
 
 	#Download Playlist
 	echo "Dowloading $PLAYLIST"
+	echo "Format is $FORMAT_SELECTION"
 	youtube-dl $PLAYLIST -i \
 	-o "/persistent/%(title)s.%(ext)s" \
-	-f bestvideo+bestaudio \
+	-f $FORMAT_SELECTION \
 	--no-check-certificate \
 	--postprocessor-args "-strict experimental" \
 	--download-archive /persistent/archive \
