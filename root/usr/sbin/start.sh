@@ -2,13 +2,14 @@
 
 while true; do
 	#Check Variables
-	if [ -z ${PLAYLIST+x} ]; then
+	if [ -z ${PLAYLIST} ]; then
+
         	echo "PLAYLIST is unset" 
 		exit
  	else
         	echo "PLAYLIST is set to '$PLAYLIST'"
 	fi
-	if [ -z ${FORMAT_SELECTION+x} ]; then
+	if [ -z ${FORMAT_SELECTION} ]; then
 		echo "FORMAT_SELECTION not set"
 		echo "Setting to bestvideo+bestaudio"
 		FORMAT_SELECTION="bestvideo+bestaudio"
