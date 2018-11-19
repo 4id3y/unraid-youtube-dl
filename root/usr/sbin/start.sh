@@ -9,6 +9,11 @@ while true; do
  	else
         	echo "PLAYLIST is set to '$PLAYLIST'"
 	fi
+	if [ -z ${OUTPUT_FORMAT} ]; then
+                echo "OUTPUT_FORMAT not set"
+                echo "Setting to /persistent/%(title)s.%(ext)s"
+                OUTPUT_FORMAT="/persistent/%(title)s.%(ext)s"
+        fi
 	if [ -z ${FORMAT_SELECTION} ]; then
 		echo "FORMAT_SELECTION not set"
 		echo "Setting to bestvideo+bestaudio"
@@ -20,7 +25,7 @@ while true; do
 	echo "Dowloading $PLAYLIST"
 	echo "Format is $FORMAT_SELECTION"
 	youtube-dl $PLAYLIST -i \
-	-o "/persistent/%(title)s.%(ext)s" \
+	-o $OUTPUT_FORMAT \
 	-f $FORMAT_SELECTION \
 	--no-check-certificate \
 	--postprocessor-args "-strict experimental" \
